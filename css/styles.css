@@ -297,6 +297,10 @@ p {
   cursor: pointer;
 }
 
+.button-close:focus {
+  outline: none;
+}
+
 .icon-close {
   fill: var(--title-text-color);
   transition: fill 250ms var(--cubic);
@@ -309,6 +313,9 @@ p {
 
 .button-close:hover {
   fill: var(--brand-accent-color);
+}
+.button-close:focus {
+  outline: none;
 }
 
 /* Наши особенности */
@@ -644,10 +651,17 @@ p {
   border-radius: 4px;
   background-color: transparent;
   color: var(--contrast-text-color);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  transition: border-color 250ms var(--cubic);
 }
 
-.footer-input:focus-within {
+.footer-input:focus {
   outline: transparent;
+  border-color: var(--brand-accent-color);
 }
 
 .footer-input:not(:placeholder-shown) {
@@ -828,6 +842,7 @@ p {
 .form-placeholder {
   font-size: 12px;
   letter-spacing: 0.01em;
+  line-height: 1.17;
   color: var(--primary-text-color);
 }
 
@@ -903,7 +918,8 @@ input:-webkit-autofill:active {
   box-shadow: 0 0 0px 1000px inherit inset;
   -webkit-text-fill-color: #000000;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 .form-policy {
@@ -920,10 +936,10 @@ input:-webkit-autofill:active {
 }
 
 .policy-text {
+  display: flex;
   color: var(--primary-text-color);
   margin-left: 10px;
-  justify-content: left;
-  align-items: center;
+  align-items: top;
   font-size: 14px;
 }
 
@@ -933,10 +949,9 @@ input:-webkit-autofill:active {
   text-decoration-line: underline;
 }
 
-.modal-form-icon {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+.form-link:hover,
+.form-link:focus {
+  text-decoration-line: none;
 }
 
 .checkbox-icon {
@@ -947,6 +962,14 @@ input:-webkit-autofill:active {
   border-radius: 2px;
   fill: transparent;
   margin-right: 9px;
+
+  margin-top: 3px;
+
+  transition: fill 250ms var(--cubic);
+}
+
+.form-checkbox:focus + .checkbox-icon {
+  border-color: var(--brand-accent-color);
 }
 
 .form-checkbox:checked + .checkbox-icon {
