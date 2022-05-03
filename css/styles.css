@@ -820,7 +820,7 @@ p {
 }
 
 .form-field {
-  position: relative;
+  /* position: relative; */
   margin-bottom: 10px;
 }
 
@@ -895,10 +895,21 @@ p {
 
 /* -------Policy------- */
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: 0 0 0px 1000px inherit inset;
+  -webkit-text-fill-color: #000000;
+  font-weight: 400;
+  font-size: 14px;
+}
+
 .form-policy {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .form-checkbox {
@@ -911,11 +922,37 @@ p {
 .policy-text {
   color: var(--primary-text-color);
   margin-left: 10px;
+  justify-content: left;
+  align-items: center;
+  font-size: 14px;
 }
 
 .form-link {
+  display: inline;
   color: var(--brand-accent-color);
   text-decoration-line: underline;
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  fill: transparent;
+  margin-right: 9px;
+}
+
+.form-checkbox:checked + .checkbox-icon {
+  background-color: var(--brand-accent-color);
+  border-color: transparent;
+  fill: var(--contrast-text-color);
 }
 
 .modal-submit-button {
@@ -930,25 +967,4 @@ p {
 
 .modal-submit-button:hover {
   background-color: var(--accent-color-hover);
-}
-
-.modal-form-icon {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-.checkbox-icon {
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--title-text-color);
-  border-radius: 2px;
-  fill: transparent;
-}
-
-.form-checkbox:checked ~ .checkbox-icon {
-  background-color: var(--brand-accent-color);
-  border-color: transparent;
-  background-origin: border-box;
-  fill: var(--contrast-text-color);
 }

@@ -74,7 +74,7 @@
                     <div class="form-field">
                         <label for="name" class="form-label">Имя</label>
                         <div class="input-wrap">
-                            <input type="text" class="form-input" name="name" id="name" placeholder=" " />
+                            <input type="text" class="form-input" name="name" id="name" placeholder=" " required minlength="3" />
                             <svg width ="18" height="18" class="form-field-icon">
                             <use href="./images/icons.svg#icon-person"></use>
                             </svg>  
@@ -106,11 +106,12 @@
                     </div>
                     
                     <div class="form-policy">
-                        <input type="checkbox" class="form-checkbox" name="policy" id="policy" />
-                        <svg width="16" height="15" class="checkbox-icon">
-                            <use href="./images/icons.svg#icon-check"></use>
-                        </svg>
-                        <label for="policy" class="policy-text">Соглашаюсь с рассылкой и принимаю <a href="#" class="form-link">Условия договора</a>
+                        <label for="policy" class="policy-text">
+                            <input type="checkbox" class="form-checkbox" name="policy" id="policy" required />
+                            <svg width="16" height="15" class="checkbox-icon">
+                                <use href="./images/icons.svg#icon-check"></use>
+                            </svg>
+                        Соглашаюсь с рассылкой и принимаю&ensp;<a href="#" class="form-link">Условия договора</a>
                         </label>
                         
                     </div>
@@ -441,14 +442,13 @@
         <div class="subscription">
             <h3 class="invite">Подпишитесь на рассылку</h3>
             <div class="subcript-email">
-                <input type="email" class="footer-input" name="email" placeholder="Email" />
+                <input type="email" class="footer-input" name="email" placeholder="Email" required />
                 <button type="submit" class="button primary">Подписаться
                 <svg class="subscription-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-send"></use>
                 </svg>
                 </button>
             </div>
-
         </div>
     </div>
 
