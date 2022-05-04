@@ -961,9 +961,11 @@ input:-webkit-autofill:active {
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
   fill: transparent;
-  margin-right: 9px;
 
+  margin-right: 9px;
   margin-top: 3px;
+
+  flex-shrink: 0;
 
   transition: fill 250ms var(--cubic);
 }
@@ -974,7 +976,7 @@ input:-webkit-autofill:active {
 
 .form-checkbox:checked + .checkbox-icon {
   background-color: var(--brand-accent-color);
-  border-color: transparent;
+  border-color: var(--brand-accent-color);
   fill: var(--contrast-text-color);
 }
 
